@@ -28,15 +28,27 @@ var userData = new User({
     telphone: '11111111'
 });
 
-////保存数据
-userData.save(function(err) {
-    if (err) {
-        console.log(err)
-    } else {
-        console.log('Save success');
-    }
+//////保存数据
+//userData.save(function(err) {
+//    if (err) {
+//        console.log(err)
+//    } else {
+//        console.log('Save success');
+//    }
+//});
+////查询数据
+//User.find(function(err,data){
+//    console.log(data);
+//});
+//删除数据
+//User.remove({name:"root"},function(err,data){
+//    if(err){
+//        console.log(err);
+//    }else{
+//        console.log(data);
+//    }
+//});
+//修改数据
+User.update({name:"root"},{$set:{name:"aaa"}},function(){//只更新一条
+
 });
-//查询数据
-User.find(function(err,data){
-    console.log(data);
-})
